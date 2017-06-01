@@ -1,0 +1,92 @@
+<!-- T&T DOCUMENTS-ONLY SCRIPTS -->
+<script language="JavaScript" src="js/tnt-documents.js" type="text/javascript"></script>
+
+<div class="mainScreen-container">
+	<div class="mainScreen-screen-item-info">
+		<div>
+			<h1>TO NO: CK98077987</h1>
+		</div>
+		<div>
+			<h1>REF: H9-238756984</h1>
+		</div>
+	</div>
+	<div id="tnt-documents" class="mainScreen-screen">
+		<div id="tnt-documents-table-wrapper" class="tnt-data-table">
+			<table id="tnt-documents-table" class="tablesorter"> 
+				<thead> 
+				<tr> 
+					<th><input id="checkAll" type="checkbox"></th>
+					<th><h3>Document</h3></th> 
+					<th><h3>Date</h3></th> 
+					<th><h3>Document No</h3></th> 
+				</tr> 
+				</thead> 
+				<tbody> 
+				<tr> 
+					<td><input type="checkbox"></td>
+					<td>Booking Advice</td> 
+					<td>10/05/2015 06:52:04</td>
+					<td>45036.PDF</td> 
+				</tr> 
+				<tr> 
+					<td><input type="checkbox"></td>
+					<td>Booking Approval</td> 
+					<td>10/06/2015 06:52:04</td>
+					<td>45037.PDF</td> 
+				</tr> 
+				<tr> 
+					<td><input type="checkbox"></td>
+					<td>HBL_OR_WL</td> 
+					<td>10/07/2015 06:52:04</td>
+					<td>45038.PDF</td> 
+				</tr> 
+				<tr> 
+					<td><input type="checkbox"></td>
+					<td>Pre_Booking_Notice</td> 
+					<td>10/08/2015 06:52:04</td>
+					<td>45039.PDF</td> 
+				</tr>
+				<tr> 
+					<td><input type="checkbox"></td>
+					<td>Pre_Booking_Manifest</td> 
+					<td>10/09/2015 06:52:04</td>
+					<td>45040.PDF</td> 
+				</tr> 
+				</tbody> 
+			</table>
+		</div>
+		<div id="tnt-documents-actions" class="ct-action-bar">
+			<div class="ct-button">
+				<a href="#">Download</a>
+			</div>
+			<div class="ct-button-subtle">
+				<a href="#">Delete</a>
+			</div>
+			<div class="ct-button-subtle">
+				<a href="#">Refresh</a>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+$( function (){
+	//initiate Documents tableSorter
+	$('#tnt-documents-table').tablesorter({
+		debug: false,
+		sortReset: true,
+		sortRestart: true,
+		//disable sorting for checkbox column 
+		headers: { 0: { sorter: false} }
+	});
+	//select all checkboxes
+	$('#checkAll').click(function () {
+     $('input:checkbox').not(this).prop('checked', this.checked);
+	});
+	//if a row is clicked, select that row's checkbox
+	$('#tnt-documents-table tr').click(function(event) {
+		if (event.target.type !== 'checkbox') {
+			$(':checkbox', this).trigger('click');
+		}
+	});
+});
+</script>
