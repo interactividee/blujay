@@ -33,7 +33,7 @@ $( function() {
 		active: false
 	});
 	$('#tnt-main').tabs({
-		active: 5,
+		active: 0,
 		beforeActivate: function (event, ui) {
 			showLoader();
 		}

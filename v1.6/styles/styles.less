@@ -7,7 +7,7 @@
     3. Global Typography
     4. Global Header
 		5. Global Nav
-    6. Custom Classes
+    6. Custom Styles
     7. Formatting for all main content pages/sections
     8. Footer
 
@@ -25,17 +25,28 @@
 @content-width: 1200px;
 
 /* company's brand colors */
-@brand-primary: #4DC2B4;
 @blue: #0091F3;
 
 /* system colors */
-@dark-grey: #535E66;
-@light-grey: #F4F4F4;
 @orange: #E48211;
 @green: #46C3B4;
 
 /* BluJay colors */
 @black-coral: #545F66;
+@vivid-cerulean: #009CDE;
+@blue-sapphire: #236192;
+@paris-green: #4CC14C;
+@picton-blue: #66CCFF;
+@medium-turquoise: #41D3BD;
+@tigers-eye: #E18335;
+@sandstorm: #E6D049;
+@sea-blue: #007090;
+@lavender: #6A4C93;
+@warning-yellow: #FFB900;
+@required-red: #FF0000;
+@type-color: #545E66;
+@high-contrast-type: #363636;
+@error-red: #9D031D;
 
 /* --------------------------------------------------- */
 /* ----------------- END LESS VARIABLES -------------- */
@@ -96,19 +107,19 @@ h1{
 	font-family: 'Gotham', sans-serif;
 	font-size: 18px;
 	font-style: normal;
-	color: @dark-grey;
+	color: @type-color;
 }
 h2{
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 16px;
 	font-style: normal;
-	color: @dark-grey;
+	color: @type-color;
 }
 h3{
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 14px;
 	font-style: normal;
-	color: @dark-grey;
+	color: @type-color;
 }
 a {
 	font-family: 'Gotham', sans-serif;
@@ -129,7 +140,7 @@ form{
 	label{
 		font-family: 'Source Sans Pro';
 		font-size: 14px;
-		color: @dark-grey;
+		color: @type-color;
 		line-height: 15px;
 		font-weight: bold;
 		font-style: normal;
@@ -145,7 +156,7 @@ form{
 		font-family: 'Source Sans Pro' !important;
 		font-size: 14px;
 		line-height: 15px;
-		color: @dark-grey;
+		color: @type-color;
 		padding: 5px;
 	}
 	input[type=email],
@@ -214,7 +225,7 @@ form{
 					}
 					span{
 						font-size: 16px;
-						color: @dark-grey;
+						color: @type-color;
 						line-height: 16px;
 						font-family: Open Sans;
 					}
@@ -244,7 +255,7 @@ form{
 							position: static;
 							width: 100%;
 							display: block;
-							color: @dark-grey;
+							color: @type-color;
 						}
 						.ui-state-active{
 							background:transparent;
@@ -316,7 +327,7 @@ form{
 	width: 100%;
 	min-width: @content-width;
 	height: 40px;
-	background-color: @dark-grey;
+	background-color: @type-color;
 	position:fixed;
 	top: 66px;
 	z-index: 10;
@@ -365,7 +376,7 @@ form{
 						border-top-left-radius: 5px;
 						border-top-right-radius: 5px;
 						a{
-							color: @dark-grey;
+							color: @type-color;
 						}
 					}
 				}
@@ -379,7 +390,7 @@ form{
 		.mainNav-subMenu{
 			position: absolute;
 			background: white;
-			border: 1px solid @dark-grey;
+			border: 1px solid @type-color;
 			border-top: none;
 			z-index: 1000;
 			padding: 0;
@@ -390,12 +401,12 @@ form{
 			}
 			>ul > li {
 				&:not(:first-of-type){
-					border-top: 1px solid @dark-grey;
+					border-top: 1px solid @type-color;
 				}
 				>a {
 					&.ui-accordion-header{
 						padding: 15px 20px;
-						color: @dark-grey;
+						color: @type-color;
 						text-transform: uppercase;
 						font-family: 'Gotham';
 						font-size: 14px;
@@ -430,7 +441,7 @@ form{
 								font-size: 16px;
 								line-height: 17px;
 								font-weight: normal;
-								color: @dark-grey;
+								color: @type-color;
 								&:first-of-type{
 									padding-top: 0;
 								}
@@ -461,7 +472,7 @@ form{
 										font-size: 16px;
 										line-height: 17px;
 										font-weight: normal;
-										color: @dark-grey;
+										color: @type-color;
 										&:before{
 											content: '\2013';
 											padding-right: 5px;
@@ -469,7 +480,7 @@ form{
 											font-size: 16px;
 											line-height: 17px;
 											font-weight: normal;
-											color: @dark-grey;
+											color: @type-color;
 										}
 										&.ui-state-active{
 											color: @orange;
@@ -510,7 +521,7 @@ form{
 					background: transparent;
 				}
 				.ui-state-default{
-					color: @dark-grey;
+					color: @type-color;
 				}
 				.ui-state-active{
 					color: @orange;
@@ -526,7 +537,7 @@ form{
 
 
 
-/* ----------------- CUSTOM CLASSES ------------------ */
+/* ----------------- CUSTOM STYLES ------------------ */
 /* --------------------------------------------------- */
 .table-info-bar{
 	display: table;
@@ -550,7 +561,7 @@ form{
 	}
 }
 .tnt-data-table{
-	border: 1px solid @dark-grey;
+	border: 1px solid fade(@black-coral, 60%);
 	display: inline-block;
 	.tnt-data-table-header,
 	.tablesorter thead tr{
@@ -578,14 +589,14 @@ form{
 					font-family: 'Source Sans Pro';
 					font-size: 14px;
 					line-height: 15px;
-					color: @dark-grey;
+					color: @type-color;
 					font-weight: bold;
 					width: auto;
 					box-sizing: border-box;
 				}
 			}
 			tr:nth-child(odd){
-				background-color: @light-grey;
+				background-color: fade(@black-coral, 10%);
 			}
 		}
 	}
@@ -606,7 +617,7 @@ form{
 			}
 			.headerSortUp,
 			.headerSortDown{
-				background: @dark-grey;
+				background: @type-color;
 			}
 		} 
 		tbody{ 
@@ -618,14 +629,14 @@ form{
 				font-family: 'Source Sans Pro';
 				font-size: 14px;
 				line-height: 15px;
-				color: @dark-grey;
+				color: @type-color;
 				font-weight: bold;
 				width: auto;
 				height: 17px !important;
 				text-align: center;
 			}
 			tr:nth-child(odd) td{
-				background-color: @light-grey;
+				background-color: fade(@black-coral, 10%);
 			}
 		}
 	}
@@ -633,7 +644,7 @@ form{
 .infobox{
 	display: table-cell;
 	background: white;
-	border: 1px solid @dark-grey;
+	border: 1px solid @type-color;
 	width: 425px;
 	height: auto;
 	vertical-align: top;
@@ -676,7 +687,7 @@ form{
 	.infobox-nav{
 		background: white;
 		padding: 5px;
-		border-bottom: 1px solid @dark-grey;
+		border-bottom: 1px solid @type-color;
 		.infobox-nav-link{
 			color: @orange;
 			font-family: 'Source Sans Pro';
@@ -688,7 +699,7 @@ form{
 			text-transform: uppercase;
 		}
 		.active{
-			color: @dark-grey;
+			color: @type-color;
 		}
 	}
 	.infobox-content{
@@ -710,7 +721,7 @@ form{
 						padding: 5px 5px 5px 10px;
 						&.headerSortUp,
 						&.headerSortDown{
-							background: @dark-grey;
+							background: @type-color;
 						}
 						&:hover{
 							cursor: pointer;
@@ -724,14 +735,14 @@ form{
 						font-family: 'Source Sans Pro';
 						font-size: 14px;
 						line-height: 15px;
-						color: @dark-grey;
+						color: @type-color;
 						font-weight: bold;
 						width: auto;
 						vertical-align: top;
 					}
 				}
 				tr:nth-child(even){
-					background-color: @light-grey;
+					background-color: fade(@black-coral, 10%);
 				}
 			}
 		}
@@ -759,26 +770,6 @@ form{
 	font-weight: 100;
 	float: right;
 }
-.ct-button-subtle{
-	a{
-		padding: 9px 18px;
-		color: white;
-		background: fade(@black-coral, 60%);
-		text-transform: uppercase;
-		text-decoration: none;
-		border-radius: 5px;
-		font-family: 'Source Sans Pro';
-		font-size: 16px;
-		text-align: center;
-		font-weight: 100;
-	}
-	a:hover{
-		background: fade(@black-coral, 40%);
-	}
-	a:active{
-		background: @black-coral;
-	}
-} 
 .form-wrapper{
 	display: table;
 	.form-row{
@@ -797,8 +788,77 @@ form{
 		}
 	}
 }
+.action-bar{
+	width: 100%;
+	line-height: 50px;
+	background: fade(@black-coral, 10%);
+	display: table;
+	>*{
+		display: table-cell;
+		vertical-align: middle;
+	}
+	&.alignLeft{
+		text-align: left;
+		>*{
+			margin-right: 20px;
+			&:first-of-type{
+				margin-left: 20px;
+			}
+		}
+	} 
+	&.alignRight{
+		text-align: right;
+		*{
+			margin-left: 20px;
+		}
+	}
+	&.justified{
+		>*:first-child{
+			text-align: left;
+		}
+		>*:last-child{
+			text-align: right;
+		}
+	}
+}
+button,
+.ui-widget button{
+	font-weight: bold;
+	border-radius: 3px;
+	text-transform: uppercase;
+	text-align: center;
+	min-width: 65px;
+	height: 30px;
+	padding: 0 10px;
+	color: white;
+	font-family: 'Source Sans Pro';
+	font-size: 14px;
+	line-height: 14px;
+	border: none;
+	&:hover{
+		cursor: pointer;
+	}
+	&.flat-std{
+		background: @vivid-cerulean;
+		&:hover{
+			background: @picton-blue;
+		}
+		&:active{
+			background: @blue-sapphire;
+		}
+	}
+	&.flat-subtle{
+		background: fade(@black-coral, 60%);
+		&:hover{
+			background: fade(@black-coral, 40%);
+		}
+		&:active{
+			background: @black-coral;
+		}
+	}
+}
 /* --------------------------------------------------- */
-/* -------------- END - CUSTOM CLASSES --------------- */
+/* -------------- END - CUSTOM STYLES --------------- */
 
 
 
@@ -870,7 +930,7 @@ body,html {
 			width: 25px;
 			height: 25px;
 			background: white;
-			border: 1px solid @dark-grey;
+			border: 1px solid @type-color;
 			border-right: none;
 			border-left: none;
 			border-top-left-radius: 5px;
@@ -891,13 +951,13 @@ body,html {
 			left: 0; 
 			right: -1px;
       border-right: 1px solid white;
-    	border-left: 1px solid @dark-grey;
+    	border-left: 1px solid @type-color;
 			border-top-left-radius: 5px;
 			border-bottom-left-radius: 5px;
 		}
 		.quick-links-wrapper{
 			background: white;
-			border: 1px solid @dark-grey;
+			border: 1px solid @type-color;
 			border-right: none;
 			border-radius: 0px;
 			padding: 20px;
@@ -917,7 +977,7 @@ body,html {
 				font-family: 'Source Sans Pro';
 				font-size: 16px;
 				line-height: 18px;
-				color: @dark-grey;
+				color: @type-color;
 				margin: 5px 0px 10px 10px;
 			}
 			.quick-links-actions{
@@ -962,9 +1022,9 @@ body,html {
 						font-weight: 100;
 					}
 					&.ui-state-active{
-						background: @light-grey;
-						border: 1px solid #979797;
-						border-bottom: @light-grey;
+						background: fade(@black-coral, 5%);
+						border: 1px solid fade(@black-coral, 60%);
+						border-bottom: 1px solid #F6F7F7;
 						a{
 							color: #e48111;
 						}	
@@ -975,11 +1035,11 @@ body,html {
 	}
 	.ui-tabs .ui-tabs-panel.ui-widget-content{
 		padding: 0;
-		border-top: 1px solid @dark-grey;
+		border-top: 1px solid fade(@black-coral, 60%);
 		border-bottom: none;
 		.mainScreen-container{
-			background: @light-grey;
-			border: 1px solid #979797;
+			background: fade(@black-coral, 5%);
+			border: 1px solid fade(@black-coral, 60%);
 			border-top: none;
 			padding: 20px;
 			.mainScreen-screen-item-info{
@@ -1021,7 +1081,7 @@ body,html {
 	}
 }
 .jspScrollable{
-	border: 1px solid @dark-grey;
+	border: 1px solid fade(@black-coral, 60%);
 	.jspArrow{
 		background-image: url(../img/jScroll-triangle.png);
 		background-repeat: no-repeat;
@@ -1108,6 +1168,9 @@ body,html {
 			background-image: none;
 		}
 	}
+	.ui-dialog-titlebar-close{
+		right: -25px;
+	}
 }
 #loading{
 	width: 100%;
@@ -1128,13 +1191,13 @@ body,html {
 		border: none;
 		.ui-tabs-panel.ui-widget-content{
 			padding: 0;
-			border-top: 1px solid @dark-grey;
+			border-top: 1px solid fade(@black-coral, 60%);
 			border-bottom: none;
 			.tnt-header-popup-content-wrapper{
-				background: @light-grey;
+				background: fade(@black-coral, 5%);
 				border: 1px solid #979797;
 				border-top: none;
-				padding: 20px;
+				padding: 20px 20px 10px;
 				.tnt-header-popup-table-wrapper{
 					min-height: 250px;
 					div{
@@ -1152,15 +1215,9 @@ body,html {
 					}
 				}
 				.tnt-header-popup-actions{
-					display: table;
-					width: 100%;
-					margin: 30px 0 20px;
-					>div{
-						display: table-cell;
-						vertical-align: middle;
-					}
+					margin-top: 10px;
+					background: transparent;
 					.actions-timezone{
-						width: 60%;
 						p, a{
 							display: inline-block;
 							font-family: 'Source Sans Pro';
@@ -1177,23 +1234,9 @@ body,html {
 							}
 						}
 					}
-					.actions-buttons{ 
-						text-align: right;
-						a{
-							padding: 9px 18px;
-							color: white;
-							background: #0090f6;
-							text-transform: uppercase;
-							text-decoration: none;
-							border-radius: 5px;
-							font-family: 'Source Sans Pro';
-							font-size: 16px;
-							text-align: center;
-							font-weight: 100;
-						}
-						a:not(:last-of-type){
-							margin-right: 10px;
-						}
+					button{
+						float: right;
+						margin-left: 20px;
 					}
 				}
 			}
@@ -1216,9 +1259,9 @@ body,html {
 				font-weight: 100;
 			}
 			&.ui-state-active{
-				background: @light-grey;
-				border: 1px solid #979797;
-				border-bottom: @light-grey;
+				background: fade(@black-coral, 5%);
+				border: 1px solid fade(@black-coral, 60%);
+				border-bottom-color: #F6F7F7;
 				a{
 					color: #e48111;
 				}	
@@ -1247,7 +1290,7 @@ body,html {
 			}
 		}
 		.popup-body{
-			background: @light-grey;
+			background: fade(@black-coral, 5%);
 			padding: 20px;
 			box-sizing: border-box;
 			height: 553px;
@@ -1269,15 +1312,15 @@ body,html {
     				margin: 0 -1px .2em 0;
 						border-radius: 0;
 						border: none;
-						border-bottom: 1px solid @dark-grey;
-						background: @light-grey;
+						border-bottom: 1px solid fade(@black-coral, 10%);
+						background: #F6F7F7;
 						margin-bottom: 0;
 						a{
 							width: 100%;
 							text-transform: uppercase;
 							font-family: 'Gotham';
 							font-size: 14px;
-							color: @dark-grey;
+							color: @type-color;
 							line-height: 15px;
 						}
 						&.ui-state-active{
@@ -1344,9 +1387,9 @@ body,html {
 				width: 385px;
 				height: 126px;
 			}
-			#add-remarks-saveSend{
-				width: 182px;
-				margin-left: 20px;
+			#add-remarks-actions{
+				background: transparent;
+				margin-top: 5x;
 			}
 		}
 	}
@@ -1372,7 +1415,7 @@ body,html {
 			}
 		}
 		.popup-body{
-			background: @light-grey;
+			background: fade(@black-coral, 5%);
 			padding: 20px;
 			box-sizing: border-box;
 			height: 553px;
@@ -1394,15 +1437,15 @@ body,html {
     				margin: 0 -1px .2em 0;
 						border-radius: 0;
 						border: none;
-						border-bottom: 1px solid @dark-grey;
-						background: @light-grey;
+						border-bottom: 1px solid fade(@black-coral, 10%);
+						background: #F6F7F7;
 						margin-bottom: 0;
 						a{
 							width: 100%;
 							text-transform: uppercase;
 							font-family: 'Gotham';
 							font-size: 14px;
-							color: @dark-grey;
+							color: @type-color;
 							line-height: 15px;
 						}
 						&.ui-state-active{
@@ -1455,7 +1498,7 @@ body,html {
 		height: auto;
 		padding: 10px;
 		box-sizing: border-box;
-		border: 2px dashed @dark-grey;
+		border: 2px dashed @type-color;
 		margin-bottom: 20px;
 		>div { 
 			width: 355px; 
@@ -1561,12 +1604,12 @@ body,html {
 			display: table-cell;
 			input{
 				width: 180px;
-				border: 1px solid @dark-grey;
+				border: 1px solid @type-color;
 				border-radius: 5px;
 				font-family: 'Source Sans Pro';
 				font-size: 16px;
 				line-height: 17px;
-				color: @dark-grey;
+				color: @type-color;
 				padding: 2px 5px;
 			}
 			label{
@@ -1635,19 +1678,19 @@ body,html {
 			width: 100%;
 			height: 33px;
 			background: @green;
-			border: 1px solid @dark-grey;
+			border: 1px solid fade(@black-coral, 60%);
 			border-bottom: 0;
 			box-sizing: border-box;
 		}
 		ul{
 			padding: 0;
 			box-sizing: border-box;
-			width: 217px;
+			width: 218px;
 			background: transparent;
 			position: relative;
-			left: 1px;
+			left: 0px;
 			li{
-				border-bottom: 1px solid @dark-grey;
+				border-bottom: 1px solid fade(@black-coral, 60%);
 				background: transparent;
 				padding-right: 0;
 				margin-bottom: 0;
@@ -1657,7 +1700,7 @@ body,html {
 					line-height: 15px;
 					text-transform: uppercase;
 					font-weight: 400;
-					color: @dark-grey;
+					color: @type-color;
 					width: 197px;
 					padding: 10px 0 10px 20px;
 				}
@@ -1665,7 +1708,7 @@ body,html {
 			.ui-tabs-active{
 				border-top: none;
 				border-right: 1px solid white;
-				border-left: 1px solid @dark-grey;
+				border-left: 1px solid fade(@black-coral, 60%);
 				background: white;
 				a{
 					color: @orange;
@@ -1673,7 +1716,7 @@ body,html {
 			}
 		}
 		.ui-tabs-panel{
-			border: 1px solid @dark-grey;
+			border: 1px solid fade(@black-coral, 60%);
 			border-top: none;
 			border-radius: 0;
 			padding: 20px 10px 40px;
@@ -1686,13 +1729,13 @@ body,html {
 							font-family: 'Source Sans Pro';
 							font-size: 14px;
 							line-height: 15px;
-							color: @dark-grey;
+							color: @type-color;
 							font-weight: 400;
 							padding: 10px;
 						}
 					}
 					tr:nth-child(odd){
-						background-color: @light-grey;
+						background-color: fade(@black-coral, 10%);
 					}
 				}
 			}
@@ -1701,86 +1744,6 @@ body,html {
 }
 /* --------------------------------------------------- */
 /* --------------- END - T&T PARTIES ----------------- */
-
-
-
-
-
-/* ---------------- T&T REFERENCE -------------------- */
-/* --------------------------------------------------- */
-#tnt-reference{
-	#tnt-reference-searchBtn{
-		text-align: right;
-		width: 630px;
-		margin: 30px 0;
-		a{
-			float: none;
-		}
-	}
-	#tnt-reference-table-info{
-		width: 632px;
-	}
-	.tnt-data-table{
-		width: 630px;
-	}
-	.tnt-data-table-header{
-		display: table;
-		width: 100%;
-		box-sizing: border-box;
-		>div{
-			display: table-cell;
-			input{
-				width: 180px;
-				border: 1px solid @dark-grey;
-				border-radius: 5px;
-				font-family: 'Source Sans Pro';
-				font-size: 16px;
-				line-height: 17px;
-				color: @dark-grey;
-				padding: 2px 5px;
-			}
-			label{
-				position: absolute;
-				left: 623px;
-				top: 151px;
-			}
-		}
-		>div:last-of-type{
-			text-align: right;
-		}
-	}
-	.tnt-data-table-body{
-		table{
-			tr{
-				th{
-					font-family: 'Source Sans Pro';
-					color:#888888;
-					text-transform: uppercase;
-					font-size: 16px;
-					line-height: 16px;
-					text-align: left;
-					padding: 10px 10px 15px;
-				}
-				td{
-					a{
-						color: @orange;
-						font-family: 'Source Sans Pro';
-						font-size: 14px;
-						line-height: 15px;
-						text-transform: uppercase;
-					}
-				}
-			}
-			tr:first-of-type{
-				th{
-					background: white;
-				}
-			}
-		}
-	}
-}
-/* --------------------------------------------------- */
-/* ------------- END - T&T REFERENCE ----------------- */
 
 
 
@@ -1964,19 +1927,13 @@ body,html {
 			}
 		}
 		.milestone-row-header:nth-child(even){
-			background: @light-grey;
+			background: fade(@black-coral, 10%);
 		}
 	}
 	#milestones-actions{
-		display: table;
-		width: 100%;
-		margin: 30px 0 20px;
-		>div{
-			display: table-cell;
-			vertical-align: middle;
-		}
+		background: transparent;
+		margin-top: 10px;
 		.milestones-timezone{
-			width: 80%;
 			p, a{
 				display: inline-block;
 				font-family: 'Source Sans Pro';
@@ -1992,19 +1949,6 @@ body,html {
 					color: #e48111;
 				}
 			}
-		}
-		.milestones-add-button a{
-			padding: 9px 18px;
-			color: white;
-			background: #0090f6;
-			text-transform: uppercase;
-			text-decoration: none;
-			border-radius: 5px;
-			font-family: 'Source Sans Pro';
-			font-size: 16px;
-			text-align: center;
-			font-weight: 100;
-			float: right;
 		}
 	}
 }
@@ -2054,26 +1998,100 @@ body,html {
 		}
 	}
 	#tnt-documents-actions{
-		width: 841px;
-		text-align: left;
-		display: table-row;
-		line-height: 65px;
-		>div:nth-of-type(1){
-			width: 129px;
-		}
-		>div:nth-of-type(2){
-			width: 100px;
-		}
-		>div:nth-of-type(3){
-			width: 110px;
-		}
-		.ct-button a{
-			float: none;
+		background: transparent;
+		margin-top: 5px;
+		>*:first-of-type{
+			margin-left: 0;
 		}
 	}
 }
 /* --------------------------------------------------- */
 /* -------------- END - T&T DOCUMENTS ---------------- */
+
+
+
+
+
+/* ---------------- T&T REFERENCE -------------------- */
+/* --------------------------------------------------- */
+#tnt-reference{
+	#tnt-reference-searchBtn{
+		text-align: right;
+		width: 630px;
+		margin: 30px 0;
+		a{
+			float: none;
+		}
+	}
+	#tnt-reference-table-info{
+		width: 632px;
+	}
+	.tnt-data-table{
+		width: 630px;
+	}
+	.tnt-data-table-header{
+		display: table;
+		width: 100%;
+		box-sizing: border-box;
+		>div{
+			display: table-cell;
+			input{
+				width: 180px;
+				border: 1px solid @type-color;
+				border-radius: 5px;
+				font-family: 'Source Sans Pro';
+				font-size: 16px;
+				line-height: 17px;
+				color: @type-color;
+				padding: 2px 5px;
+			}
+			label{
+				position: absolute;
+				left: 623px;
+				top: 151px;
+			}
+		}
+		>div:last-of-type{
+			text-align: right;
+		}
+	}
+	.tnt-data-table-body{
+		table{
+			tr{
+				th{
+					font-family: 'Source Sans Pro';
+					color:#888888;
+					text-transform: uppercase;
+					font-size: 16px;
+					line-height: 16px;
+					text-align: left;
+					padding: 10px 10px 15px;
+				}
+				td{
+					a{
+						color: @orange;
+						font-family: 'Source Sans Pro';
+						font-size: 14px;
+						line-height: 15px;
+						text-transform: uppercase;
+					}
+				}
+			}
+			tr:first-of-type{
+				th{
+					background: white;
+				}
+			}
+		}
+	}
+	#tnt-reference-actions{
+		background: transparent;
+		width: 632px;
+		margin-top: 3px;
+	}
+}
+/* --------------------------------------------------- */
+/* ------------- END - T&T REFERENCE ----------------- */
 
 
 
@@ -2093,7 +2111,7 @@ body,html {
 			vertical-align: top;
 			border: none;
 			#tnt-container-table{
-				border: 1px solid @dark-grey;
+				border: 1px solid @type-color;
 				border-collapse: initial;
 				tbody{
 					border-left: none;
@@ -2150,7 +2168,7 @@ body,html {
 			vertical-align: top;
 			border: none;
 			#tnt-remarks-table{
-				border: 1px solid @dark-grey;
+				border: 1px solid @type-color;
 				border-collapse: initial;
 				tbody{
 					border-left: none;
@@ -2171,11 +2189,17 @@ body,html {
 					}
 				} 
 			}
+			/* need to find better solution for this action bar */
 			#tnt-remarks-actions{
+				background: transparent;
 				margin: 0;
-				#tnt-remarks-add-button{
-					position: relative;
-					right: -30px;
+				position: relative;
+				top: -30px;
+				left: 30px;
+				button{
+					position:absolute;
+					top: 20px;
+					right: 0;
 				}
 			}
 		}
@@ -2216,7 +2240,7 @@ body,html {
 			width: 550px;
 			display: table-cell;
 			vertical-align: top;
-			border: 1px solid @dark-grey;
+			border: 1px solid fade(@black-coral, 60%);
 			#tnt-variousInfo-table{
 				border-collapse: initial;
 				tbody{
@@ -2253,7 +2277,7 @@ body,html {
 	width: 100%;
 	min-width: @content-width;
 	height: 56px;
-	background-color: @dark-grey;
+	background-color: @type-color;
 	border-top: 4px solid @blue;
 	
 	.footer-inner{
